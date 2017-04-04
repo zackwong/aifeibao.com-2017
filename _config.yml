@@ -1,0 +1,34 @@
+url: http://aifeibao.com
+
+title: AIFEIBAO
+
+keywords: AIFEIBAO
+
+description: AIFEIBAO
+
+permalink: /products/:title.html
+
+relative_permalinks: false
+
+address: No.1 Donghu Rd., Daxie Development Zone, Ningbo, China 315812
+
+tel: +86-0574-26878666
+
+fax: +86-0574-26878668
+
+email: aifeibao@aifeibao.com
+
+exclude:
+  - README.md
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/js
+    - _assets/css
+  js_compressor: uglifier
+  css_compressor: sass
+  cache: true
+  cache_assets: true
+  gzip: []

@@ -1,0 +1,48 @@
+---
+layout: article
+---
+<div class="container content">
+  <div class="row margin-bottom-50">
+    <div class="col-md-6">
+      <p align="center"><img class="img-responsive" src="/images/{{ page.type-en }}/{{ page.image }}.jpg" alt="{{ page.title }}"></p>
+    </div>
+    <div class="col-md-6">
+      <h2>{{ page.title }}</h2>
+      <p><img class="img-responsive" src="/images/{{ page.type-en }}/{{ page.image }}-description.jpg" alt="{{ page.title }} description"></p>
+      <br>
+      <p><a href="mailto:{{ site.email }}" target="_blank" class="btn-u btn-u-red btn-u-lg"><i class="icon-left fa fa-envelope-o"></i>Email Us</a></p>
+    </div>
+  </div>
+  {{ content }}
+  <div class="margin-bottom-60"></div>
+<div class="illustration-v2">
+  <div class="container">
+    <div class="heading heading-v1 margin-bottom-20"><h2>More {{ page.type }}</h2></div>{% if page.type-en == 'deposit-safe' %}{% for post in site.categories["deposit-safe"] %}
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="product-img product-img-brd margin-bottom-30">
+        <a href="{{ site.url }}{{ post.url }}"><img class="full-width img-responsive" src="/images/{{ post.type-en }}/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
+        <a class="product-review" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+    </div>{% endfor %}{% endif %}{% if page.type-en == 'hotel-safe' %}{% for post in site.categories["hotel-safe"] %}
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="product-img product-img-brd margin-bottom-30">
+        <a href="{{ site.url }}{{ post.url }}"><img class="full-width img-responsive" src="/images/{{ post.type-en }}/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
+        <a class="product-review" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+    </div>{% endfor %}{% endif %}{% if page.type-en == 'gun-safe' %}{% for post in site.categories["gun-safe"] %}
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="product-img product-img-brd margin-bottom-30">
+        <a href="{{ site.url }}{{ post.url }}"><img class="full-width img-responsive" src="/images/{{ post.type-en }}/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
+        <a class="product-review" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+    </div>{% endfor %}{% endif %}{% if page.type-en == 'home-office-safe' %}{% for post in site.categories["home-office-safe"] %}
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="product-img product-img-brd margin-bottom-30">
+        <a href="{{ site.url }}{{ post.url }}"><img class="full-width img-responsive" src="/images/{{ post.type-en }}/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
+        <a class="product-review" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+    </div>{% endfor %}{% endif %}
+  </div>
+  <div class="margin-bottom-60"></div>
+</div>
+</div>

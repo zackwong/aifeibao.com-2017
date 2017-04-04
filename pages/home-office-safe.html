@@ -1,0 +1,22 @@
+---
+layout: pages
+permalink: /home-office-safe/
+category: products
+title: Home & Office Safe
+keywords: Home & Office Safe
+description: Home & Office Safe
+---
+<div class="content container">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="heading heading-v1 margin-bottom-20"><h2>{{ page.title }}</h2></div>
+  </div>
+  <div class="row illustration-v2">{% for post in site.categories["home-office-safe"] %}
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="product-img product-img-brd margin-bottom-30">
+        <a href="{{ site.url }}{{ post.url }}"><img class="full-width img-responsive" src="/images/{{ post.type-en }}/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
+        <a class="product-review" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+    </div>{% endfor %}
+  </div>
+  <div class="margin-bottom-60"></div>
+</div>

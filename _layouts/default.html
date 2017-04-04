@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/aifeibao-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="AIFEIBAO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% stylesheet application %}
+  </head>
+  <body class="header-fixed">
+    <div class="wrapper">
+      <div class="header-v5">
+        <div class="topbar-v3">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <ul class="left-topbar">
+                  <li><a href="mailto:{{ site.email }}">Email: {{ site.email }}</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-inline right-topbar pull-right">
+                  <li><a href="tel:{{ site.tel }}">Tel: {{ site.tel }}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-default mega-menu" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ site.url }}"><img id="logo-header" src="/images/assets/aifeibao-logo.png" alt="AIFEIBAO Logo"></a>
+            </div>
+            <div class="shop-badge badge-icons pull-right"><a href="https://mall.jd.com/index-603091.html" target="_blank"><i class="fa fa-shopping-cart"></i></a></div>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+              <ul class="nav navbar-nav">
+                <li class="{% if page.category == 'home' %}active{% endif %}"><a href="{{ site.url }}">Home</a></li>
+                <li class="{% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">About</a></li>
+                <li class="{% if page.category == 'products' %}dropdown active{% else %}dropdown{% endif %}">
+                  <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-delay="1000">Products</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ site.url }}/gun-safe/">Gun Safe</a></li>
+                    <li><a href="{{ site.url }}/hotel-safe/">Hotel Safe</a></li>
+                    <li><a href="{{ site.url }}/deposit-safe/">Deposit Safe</a></li>
+                    <li><a href="{{ site.url }}/home-office-safe/">Home & Office Safe</a></li>
+                  </ul>
+                </li>
+                <li class="{% if page.category == 'news' %}active{% endif %}"><a href="{{ site.url }}/news/">News</a></li>
+                <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">Contact Us</a></li>
+                <li><a href="http://www.aifeibao.com" target="_blank">中文版</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ content }}
+      <div id="footer-v1" class="footer-v1">
+        <div class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 map-img md-margin-bottom-40">
+                <div class="headline"><h2>Contact Us</h2></div>
+                <address class="md-margin-bottom-40">
+                  <i class="fa fa-home"></i> {{ site.address }}<br>
+                  <i class="fa fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a><br>
+                  <i class="fa fa-fax"></i> {{ site.fax }}<br>
+                  <i class="fa fa-envelope"></i> <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                </address>
+              </div>
+              <div class="col-md-3 md-margin-bottom-40">
+                <div class="headline"><h2>Products</h2></div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="list-unstyled link-list">
+                      <li><a href="{{ site.url }}/gun-safe/">Gun Safe</a><i class="fa fa-angle-right"></i></li>
+                      <li><a href="{{ site.url }}/hotel-safe/">Hotel Safe</a><i class="fa fa-angle-right"></i></li>
+                      <li><a href="{{ site.url }}/deposit-safe/">Deposit Safe</a><i class="fa fa-angle-right"></i></li>
+                      <li><a href="{{ site.url }}/home-office-safe/">Home & Office Safe</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 md-margin-bottom-40">
+                <div class="headline"><h2>Sitemap</h2></div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="list-unstyled link-list">
+                      <li><a href="{{ site.url }}/home-safe/">Home</a></li>
+                      <li><a href="{{ site.url }}/about/">About</a></li>
+                      <li><a href="{{ site.url }}/news/">News</a></li>
+                      <li><a href="{{ site.url }}/contact/">Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 md-margin-bottom-40">
+                <div class="posts">
+                  <div class="headline"><h2>News</h2></div>
+                  <ul class="list-unstyled latest-list">{% for post in site.categories["news"] limit:2 %}
+                    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a><small>{{ post.date | date_to_string }}</small></li>{% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="text-center">Copyright © 2009-2017 NINGBO AIFEIBAO SAFE MANUFACTURE CO.,LTD | <a href="{{ site.url }}/Sitemap.xml" target="_blank">Sitemap</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% javascript application %}
+    <!--[if lt IE 9]>
+      <script src="/assets/respond.js"></script>
+      <script src="/assets/html5shiv.js"></script>
+      <script src="/assets/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+  </body>
+</html>
